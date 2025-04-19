@@ -142,6 +142,9 @@ ath11k/IPQ5018/hw1.0/caldata.bin)
 	glinet,b3000)
 		caldata_extract "0:ART" 0x1000 0x20000  
 		;;
+	ruijie,rg-ma30363)
+		caldata_extract "0:ART" 0x780000 0x880000  
+		;;
 	esac
 	;;
 ath11k/qcn6122/hw1.0/caldata_1.bin)
@@ -161,7 +164,8 @@ ath11k/qcn6122/hw1.0/caldata_1.bin)
 	udaya,a6-od2|\
 	hfcl,ion4xi_w|\
 	wallys,dr5018|\
-	yuncore,fap655)
+	yuncore,fap655|\
+	ruijie,rg-ma3063)
 		caldata_extract "0:ART" 0x26800 0x20000  
 		;;
 	esac
@@ -180,6 +184,9 @@ ath11k/qcn6122/hw1.0/caldata_2.bin)
 	cybertan,eww631-b1|\
 	glinet,b3000)
 		caldata_extract "0:ART" 0x26800 0x20000
+		;;
+	ruijie,rg-ma30363)
+		caldata_extract "0:ART" 0x780000 0x880000  
 		;;
 	esac
 	;;

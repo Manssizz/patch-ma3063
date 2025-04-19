@@ -219,3 +219,14 @@ define Device/glinet_b3000
   IMAGE/nand-factory.bin := append-ubi | qsdk-ipq-factory-nand
 endef
 TARGET_DEVICES += glinet_b3000
+
+define Device/ruijie_rg-ma3063
+  DEVICE_TITLE := Ruijie RG-MA3063
+  DEVICE_DTS := qcom-ipq5018-eww631-b1
+  SUPPORTED_DEVICES := ruijie,rg-ma3063
+  DEVICE_PACKAGES := ath11k-wifi-ruijie-rg-ma3063 ath11k-firmware-ipq50xx-spruce ath11k-firmware-qcn6122
+  DEVICE_DTS_CONFIG := config@mp03.5-c1
+  IMAGES := sysupgrade.tar nand-factory.bin nand-factory.ubi
+  IMAGE/nand-factory.ubi := append-ubi
+endef
+TARGET_DEVICES += ruijie_rg-ma3063

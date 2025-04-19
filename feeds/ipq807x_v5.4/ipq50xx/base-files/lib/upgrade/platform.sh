@@ -90,7 +90,8 @@ platform_check_image() {
 	edgecore,oap101|\
 	edgecore,oap101-6e|\
 	edgecore,oap101e|\
-	edgecore,oap101e-6e)
+	edgecore,oap101e-6e|\
+	ruijie,rg-ma3063)
 		[ "$magic_long" = "73797375" ] && return 0
 		;;
 	esac
@@ -147,7 +148,8 @@ platform_do_upgrade() {
 	cybertan,eww631-b1|\
 	sonicfi,rap630c-311g|\
 	sonicfi,rap630w-311g|\
-	sonicfi,rap630w-312g)
+	sonicfi,rap630w-312g|\
+	ruijie,rg-ma3063)
 		boot_part=$(fw_printenv bootfrom | cut  -d = -f2)
 			echo "Current bootfrom is $boot_part"
 			if [[ $boot_part == 1 ]]; then

@@ -24,7 +24,8 @@ qcom_setup_interfaces()
 		ucidef_set_interface_lan ""
 		;;
 	sonicfi,rap630w-311g|\
-	cybertan,eww631-b1)
+	cybertan,eww631-b1|\
+	ruijie,rg-ma3063)
 		ucidef_add_switch "switch1" "5:wan" "2:lan" "3:lan" "4:lan" "6u@eth0"
 		;;
 	udaya,a6-id2)
@@ -88,7 +89,8 @@ qcom_setup_macs()
 	sonicfi,rap630c-311g|\
 	sonicfi,rap630w-311g|\
 	cybertan,eww631-a1|\
-	cybertan,eww631-b1)
+	cybertan,eww631-b1|\
+	ruijie,rg-ma3063)
 		mtd=$(find_mtd_chardev "0:APPSBLENV")
 		[ -z "$mtd" ] && return;
 		mac=$(grep BaseMacAddress= $mtd | cut -d '=' -f2)
